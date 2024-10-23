@@ -105,12 +105,20 @@ $(document).ready(function () {
         switchs = !switchs;
     });
 
+    // Hide and show item in categorie
+    const categorieList = document.querySelector("#categorieList");
+    const btn_categorie = document.querySelector("#categorieBtn");
+    let switchOfCategorie = true;
+    
+    $(btn_categorie).click(function () { 
+        if (switchOfCategorie){
+            $(categorieList).slideDown();        
+        } else {
+            $(categorieList).slideUp();
+        }
+        switchOfCategorie = !switchOfCategorie;
+    });
 
-});
 
-// JavaScript for dropdown functionality
-document.getElementById("categorieBtn").addEventListener("click", function() {
-    var categorieList = document.getElementById("categorieList");
-    categorieList.classList.toggle("active");  // Toggle between showing and hiding the dropdown
 });
 
