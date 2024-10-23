@@ -1,52 +1,53 @@
-/* *{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-} */
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
 
-header{
+header {
     position: sticky;
 }
 
-.nav{
-    outline: 1px solid red;
+.nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0px 30px ;
+    background-color: #3C3D37;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    h1{
+        color: white;
+    }
 }
 
-.menu{
+.menu {
     padding: 20px;
 }
 
-.menu span a{
-    margin-right: 50px;
-    text-decoration: none;
-    cursor: pointer;
-    color: black;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.bottomNav{
-    outline: 1px solid green;
+.bottomNav {
     display: flex;
     justify-content: space-around;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.searchbox{
+.searchbox {
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 10px 0px;
 }
 
-.searchbox input{
-    padding: 10px 200px 10px 20px; 
+.searchbox input {
+    padding: 10px 200px 10px 20px;
     border-radius: 20px;
     position: relative;
 }
 
-.searchbox button{
+.searchbox button {
     position: absolute;
     padding: 10px;
     margin-left: 22.3rem;
@@ -54,58 +55,235 @@ header{
     cursor: pointer;
 }
 
-/* Hidden item */
-.nav{
-    outline: 1px solid red;
-    display: flex;
-    justify-content: space-between;
-}
-
-.menu a{
-    padding: 20px 80px 20px 80px;
+/* Menu Hover Effect */
+.menu a {
+    position: relative;
+    text-decoration: none;
+    color: #ffff;
+    padding: 5px 0;
+    margin-right: 50px;
+    cursor: pointer;
     font-size: 20px;
+    font-weight: 600;
 }
 
-/* .menu a{
-    margin-left: 80px
-} */
+.menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    right: 0; /* เริ่มจากฝั่งขวา */
+    background-color: #fff;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
 
-.ai{
+.menu a:hover::after {
+    width: 100%;
+    left: 0; /* ขยายความยาวเส้นเต็มจากฝั่งขวา */
+}
+
+.menu a:not(:hover)::after {
+    left: auto; /* กลับไปฝั่งซ้ายเมื่อเอาเมาส์ออก */
+    right: 0;
+}
+
+/* Login and Toggle Alignment */
+
+.loginAndregister {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* ช่องว่างระหว่างองค์ประกอบ */
+}
+
+.loginAndregister .LoginRegister {
+    font-size: 15px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+.loginAndregister .LoginRegister::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.loginAndregister .LoginRegister:hover::after {
+    width: 100%;
+    left: 0; /* ขยายความยาวเส้นเต็มจากฝั่งขวา */
+}
+
+.loginAndregister .LoginRegister:not(:hover)::after {
+    left: auto; /* กลับไปฝั่งซ้ายเมื่อเอาเมาส์ออก */
+    right: 0;
+}
+
+.loginAndregister .fa {
+    color: #000;
+    padding: 1px;
+    color: #fff;
+    border-radius: 50%;
+}
+
+/* Toggle Button */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 33px;
+    margin-left: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(37, 37, 37);
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #000;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+    background-color: #fff;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* AI Links */
+.ai {
     display: flex;
     justify-content: center;
-    padding: 50px 0px ;
-    outline: 1px solid red;
+    padding: 50px 0px;
     display: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #3C3D37;
 }
 
-.inhome a, .inproduct a, .inservice a, .inaboutme a{
+.inhome a,
+.inproduct a,
+.inservice a,
+.inaboutme a {
     margin-right: 70px;
     font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
 }
 
-/* Categorie */
+.descript .ai a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
 
-.categorie  {
+.descript .ai a:hover::after {
+    width: 100%;
+    left: 0; /* Expands the underline from right to left */
+}
+
+.descript .ai a:not(:hover)::after {
+    left: auto; /* Resets to original state */
+    right: 0;
+}
+
+
+
+
+/* Categorie */
+.categorie {
     display: flex;
 }
 
-.categorie button{
+.categorie button {
     padding: 10px;
 }
 
-.categorie i{
+.categorie i {
     color: black;
     font-size: 18px;
 }
 
-.categorie span{
+.categorie span {
     margin-left: 5px;
     font-size: 15px;
 }
 
-.item-categorie{
-    outline: 1px solid red;
+.item-categorie {
     display: flex;
     justify-content: flex-end;
-    
+    padding: 0px 156px;
+}
+
+/* Hide the dropdown by default */
+.item-categorie ul {
+    display: none; /* ซ่อน dropdown เริ่มต้น */
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 200px;
+    padding: 10px;
+}
+
+.item-categorie ul li {
+    list-style-type: none;
+    padding: 5px 10px;
+}
+
+.item-categorie ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.item-categorie ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Display dropdown when active */
+.item-categorie ul.active {
+    display: block; /* แสดง dropdown */
 }

@@ -7,15 +7,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="background">
     <header>
         <div class="nav">
-            <h1>Website</h1>
+            <h1>Seller</h1>
             <div class="menu">
                 <a href="" id="Home"><span>Home</span></a>
                 <a href="" id="Product"><span>Product</span></a>
                 <a href="" id="Service"><span>Service</span></a>
                 <a href="" id="Aboutme"><span>About Me</span></a>
+            </div>
+            <div class="login">
+                <div class="loginAndregister">
+                    <span><a href="#" class="LoginRegister">Login / Registor</a></span>
+                    <i class="fa fa-solid fa-user"></i>
+                    <!-- Rounded switch -->
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round" id="buttonchange"></span>
+                    </label>
+                </div>
             </div>
         </div>
         <div class="descript">
@@ -53,14 +64,13 @@
                 </button>
             </div>
             <div class="categorie">
-                <button>
+                <button id="categorieBtn">
                     <i class="fa-solid fa-icons"><span>Categorie</span></i>
                 </button>
-                <h1></h1>
             </div>
         </div>
         <div class="item-categorie">
-            <ul>
+            <ul id="categorieList">
                 <li><a href="#">Technology</a></li>
                 <li><a href="#">ModulePixel</a></li>
                 <li><a href="#">All</a></li>

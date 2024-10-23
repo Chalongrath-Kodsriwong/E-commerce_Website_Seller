@@ -85,5 +85,32 @@ $(document).ready(function () {
         menu_aboutme.stop(true, false).slideUp();
         showBottomNav();
     });
+
+
+    // Change backgground color
+    const bg = $("#background");
+    const btn = $("#buttonchange");
+    let switchs = true;
+
+    $(btn).click(function () { 
+        if (switchs) {
+            bg.css({
+                "background-color": "#3C3D37"
+            });
+        } else {
+            bg.css({
+                "background-color": "white"
+            });
+        }
+        switchs = !switchs;
+    });
+
+
+});
+
+// JavaScript for dropdown functionality
+document.getElementById("categorieBtn").addEventListener("click", function() {
+    var categorieList = document.getElementById("categorieList");
+    categorieList.classList.toggle("active");  // Toggle between showing and hiding the dropdown
 });
 
