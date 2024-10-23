@@ -1,0 +1,111 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+header{
+    position: sticky;
+}
+
+.nav{
+    outline: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu{
+    padding: 20px;
+}
+
+.menu span a{
+    margin-right: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.bottomNav{
+    outline: 1px solid green;
+    display: flex;
+    justify-content: space-around;
+}
+
+.searchbox{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.searchbox input{
+    padding: 10px 200px 10px 20px; 
+    border-radius: 20px;
+    position: relative;
+}
+
+.searchbox button{
+    position: absolute;
+    padding: 10px;
+    margin-left: 22.3rem;
+    border-radius: 0px 20px 20px 0px;
+    cursor: pointer;
+}
+
+/* Hidden item */
+.nav{
+    outline: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu a{
+    padding: 20px 80px 20px 80px;
+    font-size: 20px;
+}
+
+/* .menu a{
+    margin-left: 80px
+} */
+
+.ai{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0px ;
+    outline: 1px solid red;
+    display: none;
+}
+
+.inhome a, .inproduct a, .inservice a, .inaboutme a{
+    margin-right: 70px;
+    font-size: 20px;
+}
+
+/* Categorie */
+
+.categorie  {
+    display: flex;
+}
+
+.categorie button{
+    padding: 10px;
+}
+
+.categorie i{
+    color: black;
+    font-size: 18px;
+}
+
+.categorie span{
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+.item-categorie{
+    outline: 1px solid red;
+    display: flex;
+    justify-content: flex-end;
+    
+}
