@@ -287,3 +287,7 @@ input:checked + .slider:before {
 .item-categorie ul.active {
     display: block; /* แสดง dropdown */
 }
+
+body{
+    background: url("../Font-End_Size/image/background\(test1\).avif");
+}
