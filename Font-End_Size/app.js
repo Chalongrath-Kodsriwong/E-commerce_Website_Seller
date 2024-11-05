@@ -95,11 +95,11 @@ $(document).ready(function () {
     $(btn).click(function () { 
         if (switchs) {
             bg.css({
-                "background-color": "#3C3D37"
+                "background": 'url("../Font-End_Size/image/background\(test2\).avif")'
             });
         } else {
             bg.css({
-                "background-color": "white"
+                "background": 'url("../Font-End_Size/image/background\(test1\).avif")'
             });
         }
         switchs = !switchs;
@@ -119,6 +119,7 @@ $(document).ready(function () {
         switchOfCategorie = !switchOfCategorie;
     });
 
-
+    // Slide display promote
+    
 });
 
