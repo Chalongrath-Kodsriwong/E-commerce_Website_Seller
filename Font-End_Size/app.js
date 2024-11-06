@@ -120,6 +120,41 @@ $(document).ready(function () {
     });
 
     // Slide display promote
-    
+    // arrow
+    const btn_arrow_left = document.querySelector("#arrowleft");
+    const btn_arrow_right = document.querySelector("#arrowright");
+
+    // image
+    const images = [$("#sec1"), $("#sec2"), $("#sec3")];
+
+    // description
+    const descriptions = [$("#descript1"), $("#descript2"), $("#descript3")];
+
+    // Initial slide index
+    let currentSlide = 0;
+
+    const showSlide = (index) => {
+        images.forEach((img, i) => img.hide());
+        descriptions.forEach((desc, i) => desc.hide());
+
+        images[index].fadeIn(200);
+        descriptions[index].fadeIn(200);
+    };
+
+    $(btn_arrow_right).click(() => { 
+        // Move to the next slide
+        currentSlide = (currentSlide + 1) % images.length;
+        showSlide(currentSlide);
+    });
+
+    $(btn_arrow_left).click(() => { 
+        // Move to the next slide
+        currentSlide = (currentSlide - 1 + images.length) % images.length;
+        showSlide(currentSlide);
+    });
+
+    showSlide(currentSlide);
+
+
 });
 
